@@ -30,3 +30,9 @@ jobs:
       - run: sam build --use-container
       # sam deploy
       - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name micro --resolve-s3 --capabilities CAPABILITY_IAM --region eu-west-1
+
+      - name: Experiment
+        run: |
+          pwd             # /home/runner/work/try/try
+          cd .aws/build
+          ls -la  
