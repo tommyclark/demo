@@ -20,6 +20,6 @@ public class BookController {
 
     @Get
     public String get() {
-        return "hello";
+        return "{ \"hello\": \"there\" } ";
     }
 }
