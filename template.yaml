@@ -10,7 +10,7 @@ Resources:
     Properties:
       Handler: io.micronaut.function.aws.proxy.MicronautLambdaHandler
       Runtime: provided
-      CodeUri: .aws-sam/build/libs/demo-0.1-lambda.zip
+      CodeUri: build/libs/demo-0.1-lambda.zip
       MemorySize: 512
       Policies: AWSLambdaBasicExecutionRole
       Tracing: Active
