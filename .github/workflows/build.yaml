@@ -25,14 +25,14 @@ jobs:
         uses: gradle/wrapper-validation-action@e6e38bacfdf1a337459f332974bb2327a31aaf4b
       - name: Build with Gradle
         run: ./gradlew build
-        
-      # sam build 
-      - run: sam build --use-container
-      # sam deploy
-      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name micro --resolve-s3 --capabilities CAPABILITY_IAM --region eu-west-1
 
       - name: Experiment
         run: |
           pwd             # /home/runner/work/try/try
           cd .aws/build
           ls -la  
+        
+      # sam build 
+      - run: sam build --use-container
+      # sam deploy
+      - run: sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name micro --resolve-s3 --capabilities CAPABILITY_IAM --region eu-west-1
